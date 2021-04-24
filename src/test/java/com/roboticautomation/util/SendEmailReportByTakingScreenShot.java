@@ -49,7 +49,7 @@ public class SendEmailReportByTakingScreenShot {
 		// get Session
 		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("roboticautomation2019@gmail.com", "Rubigupta1!");
+				return new PasswordAuthentication("from email id", "password");
 			}
 		});
 		// compose message
@@ -68,13 +68,13 @@ public class SendEmailReportByTakingScreenShot {
 
 			msg.setFrom(new InternetAddress("no_reply@gmail.com", "no_reply@gmail.com"));
 
-			msg.setReplyTo(InternetAddress.parse("callnirajgupta@gmail.com", false));
+			msg.setReplyTo(InternetAddress.parse("to email id", false));
 
 			msg.setSubject("Test Report by Automation", "UTF-8");
 
 			msg.setSentDate(new Date());
 
-			msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("admin_dev@aucdt.edu.gh"));
+			msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse("reply to email"));
 
 			// Create a multipart message for attachment
 			Multipart multipart = new MimeMultipart();
